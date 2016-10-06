@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh" ng-app="UniqueClass">
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -12,6 +12,20 @@
 
     <!-- Styles -->
     <link href="/css/app.css" rel="stylesheet">
+
+    <!-- 新 Bootstrap 核心 CSS 文件 -->
+<!-- <link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.0/css/bootstrap.min.css"> -->
+
+<!-- 可选的Bootstrap主题文件（一般不用引入） -->
+<!-- <link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.0/css/bootstrap-theme.min.css"> -->
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="/css/font-awesome/css/font-awesome.min.css">
+    <!-- Ionicons -->
+    <link href="/css/ionicons/css/ionicons.min.css" rel="stylesheet" type="text/css" />
+    <!-- Theme style -->
+    <link href="/css/AdminLTE.min.css" rel="stylesheet" type="text/css" />
+    <!-- <link rel="stylesheet" href="/datetimepicker/css/bootstrap-datetimepicker.min.css"> -->
+    <link rel="stylesheet" href="/css/base.css">
     <style>
         /*html, body{
             font-family: "Micosoft YaHei"
@@ -56,8 +70,10 @@
                         <li><a href="{{ url('/login') }}">登录</a></li>
                         <li><a href="{{ url('/register') }}">注册</a></li>
                     @else
+                        <li><a ui-sref="home">主页</a></li>
+                        <li><a ui-sref="admin">帮助完善</a></li>
                         <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+                            <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
                                 {{ Auth::user()->name }} <span class="caret"></span>
                             </a>
 
@@ -84,6 +100,21 @@
     @yield('content')
 
     <!-- Scripts -->
+
+<!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="/node_modules/angular/angular.js"></script>
+    <script src="/node_modules/angular-ui-router/release/angular-ui-router.js"></script>
     <script src="/js/app.js"></script>
+
+<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+<!-- <script src="http://cdn.bootcss.com/bootstrap/3.3.0/js/bootstrap.min.js"></script> -->
+    <script src="/js/base.js"></script>
+    <script src="/js/course.js"></script>
+    <script src="/js/eclass.js"></script>
+    <script src="/js/homework.js"></script>
+    <script src="/js/classroom.js"></script>
+    <script src="/js/teacher.js"></script>
+    <script src="/js/style.js"></script>
 </body>
 </html>
